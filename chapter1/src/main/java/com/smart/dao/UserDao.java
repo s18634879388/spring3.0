@@ -27,8 +27,13 @@ public class UserDao {
         String sqlStr = " SELECT user_id,user_name "
                 + " FROM t_user WHERE user_name =? ";
         final User user = new User();
-        
 
+//        jdbcTemplate.query(sqlStr, new Object[]{userName}, new RowCallbackHandler() {
+//            public void processRow(ResultSet rs) throws SQLException {
+//                user.setUserId(rs.getInt("user_id"));
+//                user.setUserName(userName);
+//            }
+//        });
         jdbcTemplate.query(sqlStr, new Object[]{userName},
                 new RowCallbackHandler() {
                     public void processRow(ResultSet rs) throws SQLException {
@@ -36,6 +41,7 @@ public class UserDao {
                         user.setUserName(userName);
                     }
                 });
+        System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,"+user.getPassword());
         return user;
     }
 

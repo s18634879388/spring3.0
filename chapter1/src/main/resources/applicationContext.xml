@@ -20,7 +20,7 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close" 
 		p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://localhost:3306/sampledb31"
+		p:url="jdbc:mysql://localhost:3306/test"
 		p:username="root"
 		p:password="" />
 
