@@ -3,6 +3,7 @@ package com.smart.anno;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
