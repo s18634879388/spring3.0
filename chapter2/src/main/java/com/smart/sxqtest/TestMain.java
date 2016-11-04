@@ -18,6 +18,8 @@ import org.springframework.stereotype.Component;
 public class TestMain {
     @Autowired
     TestB testB;
+    @Autowired
+    TestC testC;
     public static void main(String[] args) {
 //        ResourcePatternResolver resourcePatternResolver = new PathMatchingResourcePatternResolver();
 //        Resource resource = resourcePatternResolver.getResource("classpath:com/smart/sxqtest/beans.xml");
@@ -39,6 +41,8 @@ public class TestMain {
     }
     public void ann2(){
         testB.setBname("qiuqiuqiu");
-        System.out.println(testB.getBname());
+        testC.setCname("cno");
+        testB.setTestc(testC);
+        System.out.println(testB.getBname()+"============="+testB.getTestc().getCname());
     }
 }
