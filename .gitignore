@@ -7,6 +7,7 @@
 *.sh
 *.iml
 /target
+/*/*.iml
 /chapter1/target
 /chapter2/target
 /chapter3/target
