@@ -1,5 +1,6 @@
 package com.smart.sxqtest;
 
+import org.aopalliance.intercept.MethodInterceptor;
 import org.springframework.aop.BeforeAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
@@ -46,6 +47,20 @@ public class TestMain {
 //        waiter.greetTo(name);
 //        waiter.serverTo(name);
 
+    //环绕增强
+//        ProxyFactory proxyFactory;
+//        Waiter target;
+//        MethodInterceptor methodInterceptor;
+//        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(NativeWaiter.class);
+//        NativeWaiter nativeWaiter = applicationContext.getBean(NativeWaiter.class);
+//        proxyFactory = new ProxyFactory();
+//        methodInterceptor = new GreetAroundAdvice();
+//        proxyFactory.setTarget(nativeWaiter);
+//        proxyFactory.addAdvice(methodInterceptor);
+//        Waiter proxy = (Waiter) proxyFactory.getProxy();
+//        String name = "john";
+//        proxy.greetTo(name);
+//        proxy.serverTo(name);
 
 
     }
